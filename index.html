@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Train Timetable</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Below is the link to Moment.js -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  <script type="text/javascript" src="assets/javascript/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Train Timetable</h1>
+      <h3>Anytime is train time...</h3>
+    </div>
+  </div>
+  <!-- TABLE -->
+  <div class="container">
+    <h2>Current Train Schedule</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Train Name</th>
+          <th>Destination</th>
+          <th>Frequency (Min)</th>
+          <th>Next Arrival</th>
+          <th>Minutes Away</th>
+        </tr>
+      </thead>
+      <tbody id="table-body" class="train-schedule">
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FORM -->
+  <div class="container">
+    <h2>Add Train</h2>
+    <form>
+      <div class="form-group">
+        <label>Train Name</label>
+        <input type="text" class="form-control" id="name-input" placeholder="Thomas the Tank"><br>
+
+        <label>Destination</label>
+        <input type="text" class="form-control" id="destination-input" placeholder="Philadelphia"><br>
+
+        <label>First Train Time (HH:MM - Military)</label>
+        <input type="text" class="form-control" id="first-train-time-input" placeholder="18:40"><br>
+
+        <label>Frequency (Min)</label>
+        <input type="text" class="form-control" id="frequency-input" placeholder="30"><br>
+      </div>
+      <button type="submit" class="btn btn-default" id="submit-btn">Submit</button>
+    </form>
+
+  </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+</html>
